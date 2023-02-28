@@ -1,0 +1,3 @@
+/Users/lx/csave/smallGame/cmake-build-debug/CMakeFiles/smallGame.dir
+/Users/lx/csave/smallGame/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/lx/csave/smallGame/cmake-build-debug/CMakeFiles/rebuild_cache.dir
