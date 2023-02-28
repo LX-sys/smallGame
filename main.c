@@ -32,18 +32,36 @@ bool isLeapYear(int year){
 }
 
 int main() {
-    liensH(30,'h');
+    int options;
     int year;
+    int star;
+
     while(1){
-        printf("输入年份:");
-        scanf("%d",&year);
-        if(year==-1){
+        printf("[1]画星星   [2]:判断闰年  [-1]:退出\n");
+        printf("请输入:");
+        scanf("%d",&options);
+
+        if(options==-1)
             break;
+        if(options==1){
+            printf("请输入星星数量:");
+            scanf("%d",&star);
+            liensH(star,'h');
         }
-        if(isLeapYear(year)==1){
-            printf("%d是闰年\n",year);
+        else if(options==2) {
+            printf("输入年份:");
+            scanf("%d", &year);
+            if (year == -1) {
+                break;
+            }
+            if (isLeapYear(year) == 1) {
+                printf("%d是闰年\n", year);
+            } else {
+                printf("%d是平年\n", year);
+            }
         } else{
-            printf("%d是平年\n",year);
+            printf("异常退出!\n");
+            break;
         }
 
     }
