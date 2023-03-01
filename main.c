@@ -1,4 +1,5 @@
 ﻿#include <stdio.h>
+#include <math.h>
 #include "Mylib_H/mySystem.h"
 #define bool int
 
@@ -32,8 +33,21 @@ bool isLeapYear(int year){
 
 
 int main() {
+    const float PL = 3.14f;
+    char names[] = "Liu Xuan";
+    float decimal = 3.14f;
+    printf("PL=%0.2f\n",PL);
+    printf("my name is \"%s\"\n",names);
+    printf("2^5=%d\n", (int)pow(2,5));
+    printf("小数:%0.2f\n",decimal);
 
-    processingChinese();
+    char inputName[20];
+    printf("输入名称:");
+    fgets(inputName,20,stdin);
+    printf("名字是:%s\n",inputName);
+
+    // -----以上是学习内容
+//    processingChinese();
 
     int options;
     int year;
