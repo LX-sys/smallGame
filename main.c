@@ -1,5 +1,5 @@
 ﻿#include <stdio.h>
-#include <stdlib.h>
+#include "Mylib_H/mySystem.h"
 #define bool int
 
 // 输出n个星号
@@ -30,13 +30,17 @@ bool isLeapYear(int year){
     }
 }
 
+
 int main() {
-    // 这句话是在 win下使用WinGW编译器的时候支持中文输出
-    system("chcp 65001");
+
+    processingChinese();
 
     int options;
     int year;
     int star;
+
+    isSystem();
+
 
     while(1){
         printf("[1]画星星   [2]:判断闰年  [-1]:退出\n");
