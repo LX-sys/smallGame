@@ -7,18 +7,18 @@
 
 // 判断操作系统
 bool isSystem(){
-#ifdef _WIN32
-    #ifdef _WIN64
-            printf("win64 system\n");
-            return 64;
-        #else
-            printf("win32 system\n");
-            return 32;
-        #endif
-#elif __MACH__
-    printf("MacOS system\n");
-#endif
-    return 0;
+    #ifdef _WIN32
+        #ifdef _WIN64
+                printf("win64 system\n");
+                return 64;
+            #else
+                printf("win32 system\n");
+                return 32;
+            #endif
+    #elif __MACH__
+        printf("MacOS system\n");
+    #endif
+        return 0;
 }
 
 
