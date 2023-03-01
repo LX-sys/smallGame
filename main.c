@@ -1,6 +1,5 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <stdlib.h>
-
 #define bool int
 
 // 输出n个星号
@@ -32,6 +31,9 @@ bool isLeapYear(int year){
 }
 
 int main() {
+    // 这句话是在 win下使用WinGW编译器的时候支持中文输出
+    system("chcp 65001");
+
     int options;
     int year;
     int star;
