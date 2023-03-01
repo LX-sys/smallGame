@@ -21,7 +21,7 @@ void liensH(int n,char mode){
     }
 }
 
-// 判断是否为闰年
+// 判断是否为闰年test
 bool isLeapYear(int year){
     if(year % 400 ==0 || year % 4==0 && year%100 != 0){
         return 1;
