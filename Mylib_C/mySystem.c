@@ -9,14 +9,15 @@
 bool isSystem(){
     #ifdef _WIN32
         #ifdef _WIN64
-                printf("win64 system\n");
+//                printf("win64 system\n");
                 return 64;
             #else
-                printf("win32 system\n");
+//                printf("win32 system\n");
                 return 32;
             #endif
     #elif __MACH__
-        printf("MacOS system\n");
+          return 1;
+//        printf("MacOS system\n");
     #endif
         return 0;
 }
