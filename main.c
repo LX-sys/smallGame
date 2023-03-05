@@ -8,8 +8,6 @@
 void Init(){
     int options;
 
-    isSystem();
-
     while(1){
         printf("[1]画星星   [2]:判断闰年  [-1]:退出\n");
         printf("请输入:");
