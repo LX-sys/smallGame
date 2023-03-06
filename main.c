@@ -69,7 +69,7 @@ int main() {
     size_t a = 10;
     printf("MB_CUR_MAX:%d\n",MB_CUR_MAX);
     printf("size_t a=%lld\n",a);
-    // -------线程内容
+    // -------学习win下多线程内容
     pthread_t th;
     pthread_t th2;
     pthread_create(&th,NULL,(void*)myfun1,NULL);
