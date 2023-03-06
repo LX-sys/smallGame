@@ -1,5 +1,7 @@
 ﻿#include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
+#include <pthread.h>
 #include "Mylib_H/mySystem.h"
 #include "Mylib_H/module.h"
 
@@ -32,6 +34,18 @@ void Init(){
     printf("程序运行结束\n");
 }
 
+void myfun1(void){
+    for(int i=0;i<10;i++){
+        printf("线程一号执行:%d\n", i);
+    }
+}
+
+void myfun2(void){
+    for(int i=0;i<10;i++){
+        printf("线程二号执行:%d\n", i);
+    }
+}
+
 int main() {
     // 处理中文
     processingChinese();
@@ -46,13 +60,24 @@ int main() {
     printf("小数:%0.2f\n",decimal);
 
     char inputName[20];
-    printf("输入名称:");
+    printf("输入名称:\n");
     fgets(inputName,20,stdin);
-    printf("名字是:%s\n",inputName);
+    printf("名字是:%s\n"                                                                                                                                                                                                           ,inputName);
 
     // -----以上是学习内容
 
-    Init();
+    size_t a = 10;
+    printf("MB_CUR_MAX:%d\n",MB_CUR_MAX);
+    printf("size_t a=%lld\n",a);
+    // -------线程内容
+    pthread_t th;
+    pthread_t th2;
+    pthread_create(&th,NULL,(void*)myfun1,NULL);
+    pthread_create(&th2,NULL,(void*)myfun1,NULL);
+    pthread_join(th,NULL);
+    pthread_join(th2,NULL);
+
+//    Init();
     return 0;
 }
 
